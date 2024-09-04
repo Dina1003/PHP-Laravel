@@ -8,5 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaksi extends Model
 {
-    use HasFactory;
+    protected $tabel = 'transaksis';
+
+    protected $fillable = ['kode_transaksi', 'id_cafe', 'tanggal', 'total_transaksi',
+    ];
+
+    public function detail_transaksi()
+   {
+       return $this->hasMany(Detail_Transaksi::class);
+   }
+     
 }

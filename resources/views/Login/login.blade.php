@@ -12,9 +12,9 @@
         
     @endif
 
-    @if (session()->has('error!'))
+    @if (session()->has('Error'))
     <div class="alert alert-danger alert-dismissible fade show" rolw="alert">
-      {{ session('error!') }}
+      {{ session('Error') }}
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
@@ -23,9 +23,11 @@
   
 
 <main class="form-signin w-100 m-auto">
-    <form action='/login' method="post">
-      @csrf
+
+      
       <h1 class="h3 mb-3 fw-normal">Log-In</h1>
+      <form action='/login' method="post">
+        @csrf
   
       <div class="form-floating">
         <input type="text" name="email" class="form-control @error('email')is-invalid @enderror" id="email" placeholder="Email" required value="{{ old('email') }}" autofocus>

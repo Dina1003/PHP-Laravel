@@ -14,9 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('alamat_caves', function (Blueprint $table) {
-            $table->integer('kode_pos')->primary();
+            $table->id();
+            $table->integer('kode_pos');
             $table->text('alamat');
             $table->String('kota');
+            $table->timestamps();
         });
     }
 

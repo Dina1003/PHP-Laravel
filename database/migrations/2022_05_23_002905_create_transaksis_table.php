@@ -15,12 +15,18 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
+           
             $table->string('kode_transaksi');
             $table->string('id_cafe')->foreign();
             $table->string('tanggal');
-            $table->integer('total_transaksi');
+            
+            $table->string('total_transaksi');
             $table->timestamps();
         });
+
+       
+
+       
     }
 
     /**

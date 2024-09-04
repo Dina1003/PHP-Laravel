@@ -8,9 +8,9 @@
       <form action="/register" method="POST">
         @csrf
       <div class="form-floating">
-        <input type="text" name="username" class="form-control @error('username')is-invalid @enderror" id="username" placeholder="Username" required value="{{ old('username') }}">
-        <label for="username">Username</label>
-        @error('username')
+        <input type="text" name="cafe_name" class="form-control @error('cafe_name')is-invalid @enderror" id="cafe_name" placeholder="Cafe Name" required value="{{ old('cafe_name') }}">
+        <label for="cafe_name">Cafe Name</label>
+        @error('cafe_name')
         <div class ="invalid-feedback">
           {{ $message }}
         </div> 
@@ -52,6 +52,16 @@
         <input type="text" name = "no_id" class="form-control @error('no_id')is-invalid @enderror" id="no_id" placeholder="No_id"required value="{{ old('no_id') }}">
         <label for="no_id">No Id</label>
         @error('no_id')
+        <div class ="invalid-feedback">
+          {{ $message }}
+        </div> 
+        @enderror
+      </div>
+
+      <div class="form-floating">
+        <input type="text" name = "level" class="form-control @error('level')is-invalid @enderror" id="level" placeholder="level"required value="{{ old('level') }}">
+        <label for="level">Level </label>
+        @error('level')
         <div class ="invalid-feedback">
           {{ $message }}
         </div> 

@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
-    use HasFactory;
+    protected $tabel = 'menus';
+
+    protected $fillable = ['kode_menu' , 'nama_menu', 'harga'];
+
+    public function Detail_Transaksi()
+    {
+        return $this->hasMany(Detail_Transaksi::class);
+    }
 }

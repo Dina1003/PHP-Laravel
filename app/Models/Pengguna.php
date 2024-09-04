@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Pengguna extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'level'
+    ];
     protected $guarded = [
         
     ];

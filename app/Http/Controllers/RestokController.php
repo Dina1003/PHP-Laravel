@@ -13,9 +13,18 @@ class RestokController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+    public function index(){
+
+       
+        $barang=Restok::all();
+       
+        return view('Dashboard.dashboard', compact('barang'));
+      
+        
+        // $data = DB::table('transaksis')->get();
+        // $bar = DB::table('menus')->get();
+        // $bara = DB::table('menus')->get();
+        // return view('Dashboard.dashboard', ['data'=> $data], ['bar'=> $bar], ['bara'=> $bara]);  
     }
 
     /**

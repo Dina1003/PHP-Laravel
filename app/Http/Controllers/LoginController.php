@@ -27,7 +27,7 @@ class LoginController extends Controller
 
         
        $request->session()->flush('success','Registrasi Berhasil');
-       return redirect('/dashboard');
+       return redirect('/TRETION');
 
     }
 
